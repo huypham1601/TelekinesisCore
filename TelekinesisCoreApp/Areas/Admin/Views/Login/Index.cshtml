@@ -1,0 +1,176 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login </title>
+    <!-- Bootstrap -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!-- Font -->
+    @*<link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />*@
+    @*<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">*@
+    <!-- NProgress -->
+    <link href="~/lib/nprogress/nprogress.css" rel="stylesheet" />
+    <!-- Animate.css -->
+    @*<link href="~/lib/animate.css/animate.css" rel="stylesheet" />*@
+    <link href="~/lib/notifyjs/dist/styles/metro/notify-metro.css" rel="stylesheet" />
+    <!-- Custom Theme Style -->
+    <link href="~/admin-side/css/custom.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/admin-side/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/vendor/css-hamburgers/hamburgers.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+@*<body class="login">
+    <div>
+
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form id="frmLogin">
+                        @Html.AntiForgeryToken()
+                        <h1>Login</h1>
+                        <div>
+                            <input type="text" class="form-control" name="userName" placeholder="User name" id="txtUserName" required="" />
+                        </div>
+                        <div>
+                            <input type="password" class="form-control" name="password" id="txtPassword" placeholder="Password" required="" />
+                        </div>
+                        <div>
+                            <a class="btn btn-default submit" href="#" id="btnLogin">Login</a>
+                            <a class="reset_pass" href="#">Forgot password?</a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+
+                            <div class="clearfix"></div>
+                            <br />
+
+                            <div>
+                                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <script src="~/bundled/site-admin.min.js"></script>
+    <script>
+        var login = new loginController();
+        login.initialize();
+    </script>
+</body>*@
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+                <form class="login100-form validate-form flex-sb flex-w" id="frmLogin">
+                    @Html.AntiForgeryToken()
+                    <span class="login100-form-title p-b-53">
+                        Sign In With
+                    </span>
+
+                    <a href="#" class="btn-face m-b-20">
+                        <i class="fa fa-facebook-official"></i>
+                        Facebook
+                    </a>
+
+                    <a href="#" class="btn-google m-b-20">
+                        <img src="~/admin-side/images/icons/icon-google.png" alt="GOOGLE">
+                        Google
+                    </a>
+
+                    <div class="p-t-31 p-b-9">
+                        <span class="txt1">
+                            Username
+                        </span>
+                    </div>
+
+                    @*input type="text" class="form-control" name="userName" placeholder="User name" id="txtUserName" required=""
+        input type="password" class="form-control" name="password" id="txtPassword" placeholder="Password" required=""*@
+                    @*<div>
+            <a class="btn btn-default submit" href="#" id="btnLogin">Login</a>
+            <a class="reset_pass" href="#">Forgot password?</a>
+        </div>*@
+                    <input class="input100" type="text" name="userName" placeholder="User name" id="txtUserName" required="">
+                    <span class="focus-input100"></span>
+
+
+                    <div class="p-t-13 p-b-9">
+                        <span class="txt1">
+                            Password
+                        </span>
+                    </div>
+
+                    <input class="input100" type="password" name="password" id="txtPassword" placeholder="Password" required="">
+                    <span class="focus-input100"></span>
+
+
+
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn" id="btnLogin">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <script src="~/bundled/site-admin.min.js"></script>
+    <script>
+        var login = new loginController();
+        login.initialize();
+    </script>
+
+</body>
+</html>
